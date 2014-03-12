@@ -1,6 +1,6 @@
 #ShinyForks P4K review explorer
 #by Matt Brehmer
-#Updated Nov 10, 2013
+#Updated Nov 10, 2013, moved to github repo Mar 12 2014
 #server.r
 
 shinyServer(function(input, output) {

@@ -11,6 +11,11 @@ library(plyr)
 reviews <- read.csv("pitchfork_review_data.csv",stringsAsFactors=FALSE)
   reviews <- reviews[c("artist","album","label","release_year","publish_date","accolade","score","reviewer","url")]
 
+reviewsNew <- read.csv("swdata.csv",stringsAsFactors=FALSE)
+reviewsNew <- reviewsNew[c("artist","album","label","release_year","publish_date","accolade","score","reviewer","url")]
+reviews <- rbind(reviewsNew,reviews)
+reviews <- unique(reviews)
+
 reviews$publish_date <- as.Date(reviews$publish_date)
 
 #if release year empty, use the year from the review publish data

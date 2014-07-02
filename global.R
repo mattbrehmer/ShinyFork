@@ -8,7 +8,7 @@ library(ggplot2)
 library(plyr)
 
 #load, tidy the data
-reviews <- read.csv("pitchfork_review_data.csv",stringsAsFactors=FALSE)
+reviews <- readRDS("pitchfork_review_data.rds")
   reviews <- reviews[c("artist","album","label","release_year","publish_date","accolade","score","reviewer","url")]
 
 reviewsNew <- read.csv("swdata.csv",stringsAsFactors=FALSE)
